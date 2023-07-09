@@ -1,0 +1,148 @@
+{% extends 'base/base.html' %}
+
+{% block Header %} {% endblock %}
+
+{% block Sidebar %} {% endblock %}
+
+{% block main %} {% endblock %}
+
+{% block study %} {% endblock %}
+
+{% block matery %}
+
+<main id="main" class="main">
+
+    <section class="section">
+        <div class="row align-items-top">
+            <div class="col-lg-7">
+
+
+                <!-- Card with header and footer -->
+                <div class="card">
+
+
+                    <div class="card-footer">
+
+                        <form method="post">
+
+                            <!-- Accordion without outline borders -->
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
+                                            Usuario
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <input class="form-control" type="text" value="{{ user.username | upper }}">
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            ¿Como esta conformada la rama legislitiva de Colombia?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                        <input class="form-control" type="text" name="History1">
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            ¿La tierra esta constituida por 3 elementos: ¿Cuales son??
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                        <input class="form-control" type="text" name="History2">
+                                    </div>
+
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingFour">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+                                            aria-expanded="false" aria-controls="flush-collapseFour">
+                                            La historia de la humanidad se compone en la prehistoria (ágrafo) e historia (4000 a.c)
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                            <input class="form-control" type="text" name="History3">
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingFive">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
+                                            aria-expanded="false" aria-controls="flush-collapseFive">
+                                            Las etapas de la prehistoria son: Edad de piedra y edad de los metales',
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">    
+                                            <input class="form-control" type="text" name="History4">
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingSix">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseSix"
+                                            aria-expanded="false" aria-controls="flush-collapseSix">
+                                            La historia se divide en edad antigua (50000 a.c), edad media(1492-XV), edad moderna(XV-17889)
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseSix" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                                            <input class="form-control" type="text" name="History5">
+                                    </div>
+                                </div>
+
+                                <!-- End Accordion without outline borders -->
+
+                                <br>
+
+                                {% csrf_token %}
+
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <div class="form-group">
+                                            <button class="btn btn-primary " type="submit">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br>
+
+                        </form>
+
+                    </div>
+                </div><!-- End Card with header and footer -->
+
+
+
+            </div>
+
+        </div>
+    </section>
+
+</main><!-- End #main -->
+
+{% endblock %}
+
+{% block Footer %} {% endblock %}
